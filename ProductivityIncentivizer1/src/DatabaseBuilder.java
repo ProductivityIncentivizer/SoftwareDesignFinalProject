@@ -24,7 +24,7 @@ public class DatabaseBuilder {
 			ex.printStackTrace();
 		}
 		
-		//Build up tables
+		//Build up tables in the database
 		try (
 				// Step 1: Allocate a database "Connection" object
 				Connection conn = DriverManager.getConnection(
