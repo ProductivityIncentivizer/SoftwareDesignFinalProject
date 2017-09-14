@@ -6,7 +6,7 @@ public class CreateBadgeCommand implements BadgeCommand{
 	}
 
 	@Override
-	public void doCommand() {
+	public void executeCommand() {
 		// TODO Auto-generated method stub
 		
 	}
