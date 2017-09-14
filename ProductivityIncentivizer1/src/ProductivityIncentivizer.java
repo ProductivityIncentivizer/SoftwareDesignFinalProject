@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ProductivityIncentivizer {
-
+	
 	public ProductivityIncentivizer() {
 
 	}
@@ -12,8 +12,10 @@ public class ProductivityIncentivizer {
 	public void promptUserToCreateAccount(){
 		String employeeName;
 		String employeeType;
-		AccountFactory accountFactory = new AccountFactory();
+
 		Scanner in = new Scanner(System.in);
+
+		AccountFactory accountFactory = new AccountFactory();
 		
 		System.out.println("Please enter your name.");
 		employeeName = in.nextLine();
@@ -23,9 +25,8 @@ public class ProductivityIncentivizer {
 		
 		if (employeeType.equals("1")){
 			accountFactory.getAccount(employeeType, employeeName);		
-		}
-
 		
+		}
 		else if (employeeType.equals("2")){
 			boolean supervisorCodeCheck = false;
 			while(supervisorCodeCheck == false) {
