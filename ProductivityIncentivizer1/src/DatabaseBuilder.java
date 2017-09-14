@@ -65,7 +65,7 @@ public class DatabaseBuilder {
 					"BadgeID int AUTO_INCREMENT, " +
 					"ClaimingUserID int,"+
 					"ApproveClaminUserID int,"+
-					"BadgeStatus int NOT NULL," +
+					"BadgeStatus varchar(50) NOT NULL," +
 					"primary key (BadgeID), " +
 					"UNIQUE (BadgeName))";
 			
