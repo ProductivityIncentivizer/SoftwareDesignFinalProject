@@ -1,7 +1,7 @@
 
 public interface Account {
 	
-	public void createAccount();
+	public void createAccount(String employeeName);
 	
 	public void deleteAccount();
 	
