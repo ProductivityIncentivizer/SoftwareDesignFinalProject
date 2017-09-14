@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ * put the javadoc here!!!
+ * @author sophiemittelstadt
+ *
+ */
 public class ProductivityIncentivizer {
 
 	public ProductivityIncentivizer() {
