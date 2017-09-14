@@ -3,6 +3,14 @@ import java.util.Scanner;
 public class ProductivityIncentivizer {
 
 	public ProductivityIncentivizer() {
+<<<<<<< HEAD
+=======
+		
+
+
+
+		
+>>>>>>> branch 'master' of https://github.com/ProductivityIncentivizer/SoftwareDesignFinalProject.git
 	}
 	
 	/**
@@ -23,6 +31,7 @@ public class ProductivityIncentivizer {
 		if (employeeType.equals("1")){
 			accountFactory.getAccount(employeeType, employeeName);		
 		}
+<<<<<<< HEAD
 		
 		else if (employeeType.equals("2")){
 			boolean supervisorCodeCheck = false;
@@ -40,6 +49,9 @@ public class ProductivityIncentivizer {
 			}
 		}
 		in.close();
+=======
+t
+>>>>>>> branch 'master' of https://github.com/ProductivityIncentivizer/SoftwareDesignFinalProject.git
 	}
 
 	public static void main(String[] args) {

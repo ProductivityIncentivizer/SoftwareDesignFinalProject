@@ -1,7 +1,7 @@
 
-public class CreateBadgeCommand implements BadgeCommand{
+public class ApplyForBadgeCommand implements BadgeCommand {
 
-	public CreateBadgeCommand() {
+	public ApplyForBadgeCommand() {
 		
 	}
 
