@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class ProductivityIncentivizer {
 
 	public ProductivityIncentivizer() {
+
 	}
 	
 	/**
@@ -23,6 +24,7 @@ public class ProductivityIncentivizer {
 		if (employeeType.equals("1")){
 			accountFactory.getAccount(employeeType, employeeName);		
 		}
+
 		
 		else if (employeeType.equals("2")){
 			boolean supervisorCodeCheck = false;
