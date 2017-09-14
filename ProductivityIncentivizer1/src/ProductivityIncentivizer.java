@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  */
 public class ProductivityIncentivizer {
-
+	
 	public ProductivityIncentivizer() {
 
 	}
@@ -18,7 +18,10 @@ public class ProductivityIncentivizer {
 		String employeeName;
 		String employeeType;
 		String supervisorCode = "";
+
 		Scanner in = new Scanner(System.in);
+
+		AccountFactory accountFactory = new AccountFactory();
 		
 		System.out.println("Please enter your name.");
 		employeeName = in.nextLine();
@@ -26,8 +29,12 @@ public class ProductivityIncentivizer {
 		System.out.println("Please select student worker (1) or supervisor (2).");
 		employeeType = in.nextLine();
 		
-		if(employeeType.equals("2")) {
 
+		if (employeeType.equals("1")){
+			accountFactory.getAccount(employeeType, employeeName);		
+		
+		}
+		else if (employeeType.equals("2")){
 			boolean supervisorCodeCheck = false;
 			while(supervisorCodeCheck == false) {
 				System.out.println("Please enter supervisor code: ");
@@ -35,7 +42,7 @@ public class ProductivityIncentivizer {
 			}
 		}
 		in.close();
-		addAccount(employeeName, employeeType, supervisorCode);
+
 	}
 	
 	/**
@@ -60,6 +67,7 @@ public class ProductivityIncentivizer {
 			}
 		}
 		return false;
+
 
 	}
 
