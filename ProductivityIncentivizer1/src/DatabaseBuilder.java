@@ -48,7 +48,6 @@ public class DatabaseBuilder {
 					"ActualName varchar(50), " +
 					"Warnings int, " +
 					"Awards int, " +
-					"Salary int, " +
 					"Point int, " +
 					"BadgesEarned varchar(80), " +
 					"BadgesInProcess varchar(50))";
