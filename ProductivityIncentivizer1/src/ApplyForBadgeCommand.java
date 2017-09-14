@@ -1,12 +1,12 @@
 
-public class EarnBadgeCommand implements BadgeCommand {
+public class ApplyForBadgeCommand implements BadgeCommand {
 
-	public EarnBadgeCommand() {
+	public ApplyForBadgeCommand() {
 		
 	}
 
 	@Override
-	public void doCommand() {
+	public void executeCommand() {
 		// TODO Auto-generated method stub
 		
 	}
