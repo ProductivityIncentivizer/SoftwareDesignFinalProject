@@ -7,15 +7,19 @@ import java.util.ArrayList;
 public class ApplyForBadgeCommand implements BadgeCommand {
 
 	private ArrayList<Badge> badgeList;
-	private String studentWorkerName;
+	//private String studentWorkerName;
 	 private String status = "";
-	 private int iD;
-	// private ArrayList<Badge> ;
+	 //private int iD;
+	 Badge badge;
+	 private  final String BADGE_IN_PROGRESS = "In Progress";
 	
-	public ApplyForBadgeCommand(String studentWorkerName,int iD, ArrayList<Badge> badgeList) {
-		this.badgeList = badgeList;
-		this.studentWorkerName = studentWorkerName;
-		this.iD = iD;
+	
+	
+	public ApplyForBadgeCommand(Badge badgeRequested) {
+		//this.badgeList = badgeList;
+		//this.studentWorkerName = studentWorkerName;
+		//this.iD = iD;
+		this.badge = badgeRequested;
 		
 	}
 
@@ -26,9 +30,9 @@ public class ApplyForBadgeCommand implements BadgeCommand {
 		for(Badge badges: badgeList) {
 			
 			if(badges!= null) {
-			   updateBadgeStatus(badges);
-				
 			   
+				updateBadgeStatus(badges);
+		 
 				//In process == status
 				//method that deals with database
 				
@@ -52,16 +56,28 @@ public class ApplyForBadgeCommand implements BadgeCommand {
 	 * @param badge is the badge received
 	 * */
    public void updateBadgeStatus(Badge badge) {
-	   this.status = "In progress";
-	   
-	   
-	   
-	   
+	   badge.setBadgeStatus(BADGE_IN_PROGRESS);
+	   badge.getBadgeStatus();
    }
+   
+   public boolean statusUpdate() {
+	    if(badge.getBadgeStatus().equalsIgnoreCase("In Progress")) {
+	    	
+	    }
+	   return true;
+   }
+   
 	public String toString() {
 		
 		
-		return "";
+		return "Badge Name:"+ badge.getBadgeName()+ " \n"+"Badge Description: "+ badge.getBadgeDescription()+ "\n"+" Badge Status:"+ badge.getBadgeStatus();
+	}
+
+
+	@Override
+	public void executeCommand(Badge badge) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

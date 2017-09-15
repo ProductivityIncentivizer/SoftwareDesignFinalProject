@@ -9,4 +9,7 @@ public interface BadgeCommand {
 	public void undoCommnd();
 
 
+	void executeCommand();
+
+
 }
