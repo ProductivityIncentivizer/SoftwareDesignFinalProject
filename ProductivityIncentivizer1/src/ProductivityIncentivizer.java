@@ -62,8 +62,8 @@ public class ProductivityIncentivizer {
 				accountFactory.getAccount(employeeType, employeeName);
 				return true;
 			}
-			else { //invalid code input
-					return false;
+			else if (!supervisorCode.equals("123")){ //invalid code input, account not added
+				return false;
 			}
 		}
 		return false;

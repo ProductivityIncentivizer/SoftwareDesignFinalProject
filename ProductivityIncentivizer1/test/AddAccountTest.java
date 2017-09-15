@@ -4,8 +4,8 @@ import org.junit.Test;
 
 public class AddAccountTest {
 	
-	@Test
-	public void testStudentWorkerAccount() {
+	@Test 
+	public void testStudentWorkerAccount() { 
 		ProductivityIncentivizer testRun = new ProductivityIncentivizer();
 		assertTrue(testRun.addAccount("Joe Shmo", "1", ""));
 	}
@@ -17,9 +17,15 @@ public class AddAccountTest {
 	}
 	
 	@Test
-	public void testSupervisorWithInvalidIdAccount() {
+	public void testSupervisorWithInvalidCodeAccount() {
 		ProductivityIncentivizer testRun = new ProductivityIncentivizer();
-		assertTrue(testRun.addAccount("Joe Shmoooo", "2", "123"));
+		assertFalse(testRun.addAccount("Fancy Pants", "2", "738"));
 	}
-
+	
+	@Test
+	public void testAccountWithInvalidAccountType() {
+		ProductivityIncentivizer testRun = new ProductivityIncentivizer();
+		assertFalse(testRun.addAccount("Funky Friend", "0", "123"));
+	}
+	
 }
