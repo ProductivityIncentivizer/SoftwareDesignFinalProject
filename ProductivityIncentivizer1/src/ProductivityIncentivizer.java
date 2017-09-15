@@ -28,7 +28,6 @@ public class ProductivityIncentivizer {
 				supervisorCode = in.nextLine();	
 			}
 		}
-		
 		in.close();
 		addAccount(employeeName, employeeType, supervisorCode);
 	}
